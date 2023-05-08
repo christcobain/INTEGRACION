@@ -1,0 +1,115 @@
+/* Estilos para figuras isométricas */
+* {
+  font-family: 'Roboto', sans-serif;
+}
+.hero{
+  padding-top: 80px;
+}
+.hero img,
+.features .feature i {
+  width: 100%;
+  max-width: 300px;
+}
+
+.hero img {
+  margin-top: 60px;
+}
+
+
+.features .feature i {
+  margin-bottom: 20px;
+}
+header{
+  width: 100%;
+  padding-left: 130px;
+  padding-right: 130px;
+}
+.logo-img {
+  width: 90px;
+  height: 90px;
+  max-width: 100px;
+  max-height: 100px;
+}
+.navbar-brand {
+  display: contents;
+  align-items: baseline;
+  justify-content: center;
+}
+.logo {
+  font-size: 50px;
+}
+body {
+  background-image: url("../photon.svg");
+  background-repeat: repeat;
+  background-size: cover;
+  padding-top: 20px;
+  font-family: 'Roboto', sans-serif;
+  background-position: center;
+
+}
+.botoncito{
+  display: flex;
+  padding-top: 15px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.card-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.card {
+  flex: 1;
+  margin: 0 20px;
+  background:rgba(255,255,255,.5);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+  border-radius: 15px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin: 20px;
+}
+
+.card p {
+  font-size: 1rem;
+  margin: 20px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* Estilos para enlaces de redes sociales */
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-icons li {
+  margin-left: 10px;
+}
+
+.social-icons a {
+  color: #fff;
+}
+
+.social-icons a:hover {
+  color: #ddd;
+}
