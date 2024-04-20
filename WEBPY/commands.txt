@@ -1,0 +1,26 @@
+Part#1
+docker build --tag python-django .
+docker run --publish 8000:8000 python-django
+Part#2
+docker-compose build
+docker-compose run --rm app django-admin startproject core .
+docker-compose up
+
+#Crear apps
+
+docker exec -it django_container python3 manage.py startapp $NAMEAPP
+
+
+#Dar acceso
+docker exec -it django_container chmod -R 777 myapp/
+docker exec -it django_container chmod -R 777 data 
+docker exec -it django_container python3 manage.py createsuperuser
+#Make makemigrations
+docker exec -it django_container python3 manage.py makemigrations
+
+#Migrate
+docker exec -it django_container python3 manage.py migrate
+
+#DJANGO SHELL
+docker exec -it django_container python3 manage.py shell
+#Ejm https://i.imgur.com/ySeewfy.png
