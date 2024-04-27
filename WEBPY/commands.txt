@@ -24,3 +24,5 @@ docker exec -it django_container python3 manage.py migrate
 #DJANGO SHELL
 docker exec -it django_container python3 manage.py shell
 #Ejm https://i.imgur.com/ySeewfy.png
+
+###
