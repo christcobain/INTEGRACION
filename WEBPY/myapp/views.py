@@ -3,7 +3,7 @@ from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import  messages
 from django.contrib.auth.models import User
-from .models import Category,Product, User as Uc
+#from .models import Category,Product, User as Uc
 from .models import  User as Uc
 from .forms import CreateNewProduct,RegisterForm
 from django.contrib.auth.decorators import login_required
@@ -40,12 +40,12 @@ def about(request):
     return render(request, 'about.html')
 
 @login_required
-def products(request):
-    # task=get_object_or_404(Task.objects.get(id=id))
-    products = Product.objects.all()
-    return render(request, 'products/products.html', {
-        'products': products
-    })  
+# def products(request):
+#     # task=get_object_or_404(Task.objects.get(id=id))
+#     products = Product.objects.all()
+#     return render(request, 'products/products.html', {
+#         'products': products
+#     })  
 
 @login_required
 def create_product(request):

@@ -139,6 +139,10 @@ section {
   font-family: "Nunito", sans-serif;
   margin-top: 3px;
 }
+.img-logo1 {
+  width: 100px;
+  height: auto;
+}
 
 /*--------------------------------------------------------------
 # Navigation Menu

@@ -1,5 +1,5 @@
 from django import forms
-from .models import Category, Product
+#from .models import Category, Product
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError  
@@ -49,9 +49,9 @@ class CreateNewProduct(forms.Form):
     price_unit = forms.FloatField() 
     quantity = forms.FloatField()
     type_product = forms.ChoiceField(choices=SELECTION_TYPE)
-    category = forms.ModelMultipleChoiceField(
-        queryset= Category.objects.all(), widget=forms.CheckboxSelectMultiple
-    )
+    # category = forms.ModelMultipleChoiceField(
+    #     queryset= Category.objects.all(), widget=forms.CheckboxSelectMultiple
+    # )
     def __init__(self, *args, **kwargs):
         super(CreateNewProduct, self).__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
