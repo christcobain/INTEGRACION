@@ -18,11 +18,11 @@
     
 </form> -->
 <form method="POST" class="post-form" action="{% url 'about' %}"> 
-  <!-- Email input -->
+  <!-- Dni input -->
   {% csrf_token %}
   <div class="card w-25 bg-transparent mx-auto justify-content-center border-0 my-5">
   <div class="form-outline mb-3">
-    <input type="text" id="form2Example1" class="form-control" value="{{ name }}" required/>
+    <input type="number" id="form2Example1" class="form-control" value="{{ name }}" required/>
     <label class="form-label" for="form2Example1">Ingresa tu DNI</label>
   </div>
 

@@ -4,6 +4,34 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError  
 
+# class RegisterForm(UserCreationForm):
+#     email = forms.EmailField( label='Email')
+#     username = forms.CharField(label='username', min_length=5, max_length=150)  
+#     age = forms.IntegerField(label='Edad',min_value=0)
+#     phone = forms.IntegerField(label='Telefono')
+#     address = forms.CharField(label='Dirección')
+#     image = forms.ImageField(label='Foto')
+    
+#     class Meta:
+#         model = User
+#         fields = ['username','email','password1','age','phone','address','image']
+     
+#     def __init__(self, *args, **kwargs):
+#         super(RegisterForm, self).__init__(*args, **kwargs)
+#         for field_name, field in self.fields.items():
+#             if field.widget.attrs.get('class'):
+#                 field.widget.attrs['class'] += ' form-control'
+#             else:
+#                 field.widget.attrs['class']='form-control'
+
+#     def save(self, commit = True):  
+#         user = User.objects.create_user(  
+#             self.cleaned_data['username'],  
+#             self.cleaned_data['email'],  
+#             self.cleaned_data['password1']  
+#         )  
+#         return user 
+#--creacion de usuario, voy a reemplazar los atributos segun  la TABLA BD
 class RegisterForm(UserCreationForm):
     email = forms.EmailField( label='Email')
     username = forms.CharField(label='username', min_length=5, max_length=150)  
@@ -32,8 +60,7 @@ class RegisterForm(UserCreationForm):
         )  
         return user 
 
-
-
+#------------------
 
 class CreateNewProduct(forms.Form):
     SELECTION_TYPE = (
