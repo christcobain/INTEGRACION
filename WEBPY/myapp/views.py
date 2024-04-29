@@ -27,13 +27,14 @@ def register ( request ) :
         form = RegisterForm()
     return render (request ,'users/register.html',{'form' :form} )
 
-
+#---------------------
 
 def index(request):
     title = 'Welcome Django'
     return render(request, 'index.html', {
         'title': title
     })
+
 
 @login_required
 def about(request):
