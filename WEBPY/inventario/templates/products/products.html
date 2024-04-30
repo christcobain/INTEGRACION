@@ -1,0 +1,35 @@
+{% extends 'layouts/nav.html' %} {% block content %}
+
+<main>
+  <section id="hero" class="hero d-flex align-center">
+    <div class="container">
+      <div class="row">
+        <h1 data-aos="fade-up"> Productos</h1>
+        <div class="d-flex flex-row justify-content-center  margin-top">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th>Nombres</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                  </tr>
+                </thead>
+                <tbody class="table-border-bottom-0">
+                    {% for product in products %}
+                  <tr>
+                    <td>{{product.name}}</td>
+                    <td>{{product.quantity}}</td>
+                    <td>{{product.price_unit}}</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+            </table>
+           
+      </div>
+      <button type="button" class="btn btn-primary mx-auto w-25" href="{% url 'about' %}">REGRESAR</a>
+    </div>
+   
+  </section>
+</main>
+{% endblock  %}
+
