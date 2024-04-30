@@ -1,6 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
-from inventario.managers import UserManager
+from django.contrib.auth.models import User
 
 class Sede(models.Model):
     nombre = models.CharField(max_length=50)
@@ -13,24 +12,21 @@ class UnidadOrganica(models.Model):
 
 class Estado(models.Model):
     nombre = models.CharField(max_length=50)   
-
-class Usuario(AbstractUser):
-    # Campos adicionales que desees incluir, como nombre, apellido, email, etc.
-    nombres = models.CharField(max_length=255)
-    apellidos = models.CharField(max_length=255, default="")
-    email = models.EmailField(max_length=255,)
-    dni = models.CharField(max_length=10)
-    unidadOrganica = models.ForeignKey(UnidadOrganica, on_delete=models.CASCADE, null=True, blank=True)
-    sede = models.ForeignKey(Sede, on_delete=models.CASCADE, null=True, blank=True)
-    estado = models.ForeignKey(Estado, on_delete=models.CASCADE, null=True, blank=True)
-    rol = models.ForeignKey(Rol, on_delete=models.CASCADE, null=True, blank=True)
-
-    # Campos configurables adicionales
-    is_staff = models.BooleanField(default=False)
-    is_active = models.BooleanField(default=True)
-    is_superuser = models.BooleanField(default=False)
-
     
+class Usuario(models.Model):
+    nombres = models.CharField(max_length=50)
+    apellidos = models.CharField(max_length=50)
+    dni = models.CharField(max_length=10)
+    unidadOrganica = models.ForeignKey(UnidadOrganica, on_delete=models.CASCADE)
+    sede = models.ForeignKey(Sede, on_delete=models.CASCADE)
+    estado = models.ForeignKey(Estado, on_delete=models.CASCADE)
+    rol = models.ForeignKey(Rol, on_delete=models.CASCADE)
+    contrasena = models.CharField(max_length=20)
+
+class Funcionario(models.Model):
+    nombre = models.CharField(max_length=50)
+    campo = models.CharField(max_length=20)
+    unidadOrganica = models.ForeignKey(UnidadOrganica, on_delete=models.CASCADE)
 
 class Movimiento(models.Model):
     nombre = models.CharField(max_length=50)
@@ -83,7 +79,7 @@ class DetalleProceso(models.Model):
     UsuarioFinal = models.CharField(max_length=20)
     unidadOrganicaFinal = models.CharField(max_length=20)
     sedeFinal = models.CharField(max_length=20)
-    # funcionario = models.ForeignKey(Funcionario, on_delete=models.CASCADE)
+    funcionario = models.ForeignKey(Funcionario, on_delete=models.CASCADE)
     bien = models.ForeignKey(Bien, on_delete=models.CASCADE)
     detalleTransferencia = models.ForeignKey(DetalleTransferencia, on_delete=models.CASCADE)
     detalleSalida = models.ForeignKey(DetalleSalida, on_delete=models.CASCADE)
