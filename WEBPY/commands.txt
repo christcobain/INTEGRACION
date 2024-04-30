@@ -15,6 +15,7 @@ docker exec -it django_container python3 manage.py startapp $NAMEAPP
 docker exec -it django_container chmod -R 777 myapp/
 docker exec -it django_container chmod -R 777 data 
 docker exec -it django_container python3 manage.py createsuperuser
+
 #Make makemigrations
 docker exec -it django_container python3 manage.py makemigrations
 
