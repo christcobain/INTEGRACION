@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Braham</title>
+    <title>Reniec</title>
     <!-- CSS only -->
     
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -38,13 +38,14 @@
         class="container-fluid container-xl d-flex align-items-center justify-content-between"
       >
         <a href="" class="logo d-flex align-items-center">
-          <span>Braham</span>
+          <span>Registro Nacional de Identidad y Estado Civil</span>
         </a>
 
         <nav id="navbar" class="navbar">
           <ul>
-            <li><a class="nav-link scrollto active" href="{% url 'login' %}">INGRESAR</a></li>
-            <li><a class="getstarted scrollto" href="{% url 'registro' %}">REGISTRAR</a></li>
+            <img src="{% static 'img/logo_reniec.png' %}" class="img-fluid" alt="logo de Reniec" width="180px" height="180px">
+            <!-- <li><a class="nav-link scrollto active" href="{% url 'login' %}">INGRESAR</a></li>
+            <li><a class="getstarted scrollto" href="{% url 'registro' %}">REGISTRAR</a></li> -->
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>

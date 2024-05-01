@@ -5,7 +5,7 @@
   <section id="hero" class="hero d-flex align-center">
     <div class="container">
       <div class="row">
-        <h1> Login</h1>
+        <!-- <h1> Acceder al sistema</h1> -->
 
 <!-- <form method="POST" class="post-form" action="{% url 'about' %}"> 
     {% csrf_token %}
@@ -21,40 +21,43 @@
   <!-- Email input -->
   {% csrf_token %}
   <div class="card w-25 bg-transparent mx-auto justify-content-center border-0 my-5">
+   <h3 class="h3 mb-3 fw-normal" style="color: #012970;">INICIA SESION</h3>
+    <!-- <label for="username" class="form-label" style="text-size-adjust: 100;">INGRESA</label>   -->
   <div class="form-outline mb-3">
-    <label for="username" class="form-label">Username</label>
-      <input type="text" id="username" name="username" class="form-control" placeholder="Enter Username" required autofocus>
-  </div>
+    <input type="number" class="form-control" name="username" id="username" placeholder="Ingresa DNI" data-sider-select-id="c1ce0916-08d8-4d29-84cd-8aba9081f669" required autofocus>
 
+  </div>
   <!-- Password input -->
   <div class="form-outline mb-4">
-    <label for="password" class="form-label">Password</label>
-    <input type="password" id="password" name="password" class="form-control" placeholder="Enter Password" required>
+    <!-- <label for="password" class="form-label">Contraseña</label> -->
+    <input type="password" id="password" name="password" class="form-control" placeholder="Ingresa Contraseña" required>
   </div>
 
   <!-- 2 column grid layout for inline styling -->
-  <div class="row mb-4">
+  <!-- <div class="row mb-4">
     <div class="col d-flex justify-content-center">
-      <!-- Checkbox -->
+       Checkbox
       <div class="form-check">
         <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
         <label class="form-check-label" for="form2Example31"> Remember me </label>
       </div>
     </div>
-
+    
     <div class="col">
-      <!-- Simple link -->
+      Simple link 
       <a href="#!">Recuperar contraseña?</a>
     </div>
-  </div>
+  </div> -->
 
   <!-- Submit button -->
   <button type="submit" class="btn btn-primary btn-block mb-4">Ingresar</button>
-
+  
   <!-- Registro buttons -->
   <div class="text-center">
-    <p>No estas registrado? <a href="{% url 'registro' %}">Registrarse</a></p>
+    <!-- <p>No estas registrado? <a href="{% url 'registro' %}">Registrarse</a></p> -->
+    <p class="mt-5 mb-3 text-body-secondary">© Reniec–2024</p>
   </div>
+
 </div>
 </form>
 </div>
